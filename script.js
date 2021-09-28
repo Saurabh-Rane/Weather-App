@@ -32,6 +32,11 @@ getWeatherData = (city) => {
 searchCity = () => {
   const city = document.getElementById('city-input').value;
   // CODE GOES HERE
+  getWeatherData(city).then((response) => {
+    console.log(response.base);
+  }).catch((error) => {
+    console.log(error);
+  })
 
 }
 
