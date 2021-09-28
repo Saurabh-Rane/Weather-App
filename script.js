@@ -52,6 +52,5 @@ showWeatherData = (weatherData) => {
   document.getElementById('temp').innerHTML = weatherData.main.temp;
   document.getElementById('min-temp').innerHTML = weatherData.main.temp_min;
   document.getElementById('max-temp').innerHTML = weatherData.main.temp_max;
-  
 }
 
