@@ -33,7 +33,8 @@ searchCity = () => {
   const city = document.getElementById('city-input').value;
   // CODE GOES HERE
   getWeatherData(city).then((response) => {
-    console.log(response.base);
+    console.log(response);
+    showWeatherData(response);
   }).catch((error) => {
     console.log(error);
   })
@@ -46,6 +47,11 @@ searchCity = () => {
  */
 showWeatherData = (weatherData) => {
   //CODE GOES HERE
+  document.getElementById('city-name').innerHTML = weatherData.name;
+  document.getElementById('weather-type').innerHTML = weatherData.weather[0].main;
+  document.getElementById('temp').innerHTML = weatherData.main.temp;
+  document.getElementById('min-temp').innerHTML = weatherData.main.temp_min;
+  document.getElementById('max-temp').innerHTML = weatherData.main.temp_max;
   
 }
 
